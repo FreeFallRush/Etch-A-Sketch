@@ -2,6 +2,7 @@ Project: Etch-a-Sketch - from The Odin Project Curriculum (https://www.theodinpr
 
 [![preview.gif](https://i.postimg.cc/TPrvWwvD/preview.gif)](https://postimg.cc/Jy42fRnr)
 
+---> [view project](https://freefallrush.github.io/Etch-A-Sketch/) <----
 *this version is not mobile friendly
 
 The exercise asks for a browser version of "something between a sketchpad and an Etch-A-Sketch" (sort of a very very basic Paint app). 
