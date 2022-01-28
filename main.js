@@ -52,7 +52,7 @@ function redrawCanvas(sqareNum) {
     } else if(squareNum < 0 || squareNum > 100) {
         alert ("Works only if the number is between 1 and 100. Refresh the browser and try again", "");
     } else {
-            alert ("It's working only with numebers. Refresh the browser and try again", "");
+            alert ("It's working only with numbers. Refresh the browser and try again", "");
     }   
 }
 
