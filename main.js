@@ -62,6 +62,7 @@ function removeEvents() {
     let squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
         square.removeEventListener('mouseover', defaultColor);
+        square.removeEventListener('mouseover', chooseColor);
         square.removeEventListener('mouseover', paintRainbow);
         square.removeEventListener('mouseover', paintGrayscale);
         square.removeEventListener('mouseover', clearCanvas);
@@ -126,18 +127,6 @@ function paintGrayscale() {
     });
 }
 
-//squares color monochrome on mouseover
-function paintMono() {
-    let squares = document.querySelectorAll('.square');
-    squares.forEach((square) => {
-        square.addEventListener('mouseover', () => {
-            let randomNumber = Math.floor(Math.random() * 256);
-            let monochrome = `rgb(${randomNumber},${randomNumber},${randomNumber})`;   
-            square.style.backgroundColor = monochrome;
-            square.style.opacity = '';
-        });
-    });
-}
 
 //squares color with white (leaving the impression of being erased) on mouseover
 function eraseCanvas() {
@@ -163,7 +152,6 @@ function clearCanvas() {
 function chooseOption() {
     clearCanvas();
     eraseCanvas();
-    paintMono();
     paintGrayscale();
     paintRainbow();
     chooseColor();
@@ -189,9 +177,6 @@ buttons.forEach((button) => {
     } else if(btnId === "grayscale") {
         let grayscale = document.getElementById('grayscale');
         grayscale.addEventListener('click', paintGrayscale);
-    } else if(btnId === "mono") {
-        let mono = document.getElementById('mono');
-        mono.addEventListener('click', paintMono);
     } else if(btnId === "eraser") {
         let eraser = document.getElementById('eraser');
         eraser.addEventListener('click', eraseCanvas);
