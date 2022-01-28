@@ -81,12 +81,12 @@ button {
     background-color: #ffffff; /* Green */
     border: none;
     color: rgb(228, 228, 228);
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 15px;
+    margin: 2px 2px;
     cursor: pointer;
     border: 1px dotted black;
     border-radius: 8%;
@@ -119,6 +119,13 @@ button:hover {
     text-shadow: 1px 1px 1px rgb(77, 77, 77, 0.2);
 }
 
+#mono:hover {
+    background-image: linear-gradient(to left, rgb(189, 189, 189), rgb(34, 34, 34));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px rgba(228, 228, 228, 0.1);
+}
 
 #eraser:hover {
    -webkit-text-stroke-color: rgb(214, 214, 214);
@@ -132,5 +139,10 @@ button:hover {
 
 #reset:hover {
    -webkit-text-stroke-color: rgb(173, 0, 0);
+    transition: 0.2;
+}
+
+#color-picker:hover {
+    -webkit-text-stroke-color: rgb(1, 153, 145);
     transition: 0.2;
 }
