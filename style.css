@@ -85,7 +85,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 15px;
     margin: 2px 2px;
     cursor: pointer;
     border: 1px dotted black;
@@ -119,13 +119,6 @@ button:hover {
     text-shadow: 1px 1px 1px rgb(77, 77, 77, 0.2);
 }
 
-#mono:hover {
-    background-image: linear-gradient(to left, rgb(189, 189, 189), rgb(34, 34, 34));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 1px rgba(228, 228, 228, 0.1);
-}
 
 #eraser:hover {
    -webkit-text-stroke-color: rgb(214, 214, 214);
