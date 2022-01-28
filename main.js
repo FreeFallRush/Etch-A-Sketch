@@ -80,6 +80,19 @@ function defaultColor() {
     });
 }
 
+//squares color accordingly to the color picker
+function chooseColor() {
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            let colorSelector = document.getElementById('colorPicker');
+            let colorChoice = colorSelector.value;
+            square.style.backgroundColor = colorChoice;
+            square.style.opacity = '';
+        });
+    });
+}
+
 
 // squares color with random color (rainbow) on mouseover
 function paintRainbow() {
@@ -113,6 +126,18 @@ function paintGrayscale() {
     });
 }
 
+//squares color monochrome on mouseover
+function paintMono() {
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            let randomNumber = Math.floor(Math.random() * 256);
+            let monochrome = `rgb(${randomNumber},${randomNumber},${randomNumber})`;   
+            square.style.backgroundColor = monochrome;
+            square.style.opacity = '';
+        });
+    });
+}
 
 //squares color with white (leaving the impression of being erased) on mouseover
 function eraseCanvas() {
@@ -138,8 +163,10 @@ function clearCanvas() {
 function chooseOption() {
     clearCanvas();
     eraseCanvas();
+    paintMono();
     paintGrayscale();
     paintRainbow();
+    chooseColor();
     defaultColor();
     
 }
@@ -156,9 +183,15 @@ buttons.forEach((button) => {
     } else if(btnId === "rainbow") {
         let rainbow = document.getElementById('rainbow');
         rainbow.addEventListener('click', paintRainbow);
+    } else if(btnId === "color-picker") {
+        let pickColor = document.getElementById('color-picker');
+        pickColor.addEventListener('click', chooseColor);
     } else if(btnId === "grayscale") {
         let grayscale = document.getElementById('grayscale');
         grayscale.addEventListener('click', paintGrayscale);
+    } else if(btnId === "mono") {
+        let mono = document.getElementById('mono');
+        mono.addEventListener('click', paintMono);
     } else if(btnId === "eraser") {
         let eraser = document.getElementById('eraser');
         eraser.addEventListener('click', eraseCanvas);
